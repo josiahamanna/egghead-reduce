@@ -9,14 +9,14 @@ const initalValue = 1;
 
 const incrementValue = increment(initalValue);
 const doubleValue = mulBy2(incrementValue);
-const decrementValue = decrement(doubleValue)
+const decrementValue = decrement(doubleValue);
 
-console.log('Naive way of doing it', decrementValue)
+console.log("Naive way of doing it", decrementValue);
 
 // Functional way of doing it
 
-const pipe = [ increment, mulBy2, decrement, mulBy2, divBy2 ];
+const pipe = [increment, mulBy2, decrement, mulBy2, divBy2];
 
-const result = pipe.reduce((acc, fn) =>  fn(acc), initalValue)
+const result = pipe.reduce((acc, fn) => fn(acc), initalValue);
 
-console.log('Functional way of doing it', result)
+console.log("Functional way of doing it", result);
